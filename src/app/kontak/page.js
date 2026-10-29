@@ -36,7 +36,7 @@ export default function Kontak() {
               type="text"
               id="nama"
               name="nama"
-              placeholder="Contoh: Budi Santoso"
+              placeholder="Contoh: Na Jaemin"
               required
               className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900"
             />
