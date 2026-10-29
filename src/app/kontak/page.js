@@ -10,7 +10,7 @@ export default function Kontak() {
       <div className="mt-6 flex flex-col items-center gap-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:flex-row">
         <Image
           src="/proyek-profil.png"
-          alt="Profil Laili Majida"
+          alt="Profil"
           width={160}
           height={160}
           className="h-40 w-40 rounded-full border border-gray-200 object-cover"
