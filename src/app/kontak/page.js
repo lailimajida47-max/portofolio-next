@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FormKontak from "@/components/FormKontak";
 
 export const metadata = {
   title: "Kontak",
@@ -7,91 +7,50 @@ export const metadata = {
 
 export default function Kontak() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-3xl font-bold text-utama md:text-4xl">
+    <main className="mx-auto w-full max-w-5xl px-4 py-10">
+      {/* Judul */}
+      <h1 className="text-3xl font-bold text-[#263d5b] md:text-4xl">
         Hubungi Saya
       </h1>
 
-      <p className="mt-3 text-lg text-gray-700">
-        Punya pertanyaan atau ingin bekerja sama? Silakan isi formulir berikut.
+      <p className="mt-2 text-sm text-gray-600">
+        Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
       </p>
 
-      {/* Form Kontak */}
-      <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="mb-5 text-2xl font-bold text-utama">
-          Kirim Pesan
-        </h2>
+      {/* Layout Kontak */}
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
+        {/* Form Kontak */}
+        <section className="rounded-xl border border-gray-200 bg-white dark:bg-gray-800 p-6 shadow-sm md:col-span-2">
+          <FormKontak />
+        </section>
 
-        <form
-          action="mailto:"
-          method="post"
-          encType="text/plain"
-          className="space-y-4"
-        >
-          <div>
-            <label htmlFor="nama" className="block font-semibold">
-              Nama lengkap
-            </label>
-            <input
-              type="text"
-              id="nama"
-              name="nama"
-              placeholder="Contoh: Na Jaemin"
-              required
-              className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900"
-            />
+        {/* Temukan Saya */}
+        <aside className="rounded-xl border border-gray-200 bg-white dark:bg-gray-800 p-5 shadow-sm md:p-4">
+          <h2 className="text-xl font-bold text-[#263d5b]">
+            Temukan Saya di
+          </h2>
+
+          <div className="mt-3 flex flex-col gap-2 text-sm">
+            <a
+              href="https://github.com/lailimajida47-max"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#b94c5b] hover:underline"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://github.com/lailimajida47-max"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#b94c5b] hover:underline"
+            >
+              lailimajida47-max
+            </a>
           </div>
-
-          <div>
-            <label htmlFor="email" className="block font-semibold">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="nama@email.com"
-              required
-              className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="subjek" className="block font-semibold">
-              Nomor HP
-            </label>
-            <input
-              type="text"
-              id="subjek"
-              name="subjek"
-              placeholder="0859013456812"
-              required
-              className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="pesan" className="block font-semibold">
-              Pesan
-            </label>
-            <textarea
-              id="pesan"
-              name="pesan"
-              rows={5}
-              placeholder="Tulis pesan kamu di sini..."
-              required
-              className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="rounded-lg bg-utama px-5 py-3 font-semibold text-white hover:opacity-90"
-          >
-            Kirim Pesan
-          </button>
-        </form>
-      </section>
+        </aside>
+      </div>
     </main>
   );
 }

@@ -1,10 +1,15 @@
-import ProyekCard from "@/components/ProyekCard";
+import FilterProyek from "@/components/FilterProyek";
 import { proyek } from "@/data/proyek";
+
+export const metadata = {
+  title: "Proyek",
+  description: "Daftar proyek HTML, CSS, dan JavaScript karya Laili Majida.",
+};
 
 export default function DaftarProyek() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-3xl font-bold text-utama md:text-4xl">
+    <main className="mx-auto w-full max-w-5xl px-4 py-10">
+      <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
         Proyek Saya
       </h1>
 
@@ -13,14 +18,7 @@ export default function DaftarProyek() {
         melihat detailnya.
       </p>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-3">
-        {proyek.map((item, index) => (
-          <ProyekCard
-            key={item.slug || index}
-            proyek={item}
-          />
-        ))}
-      </div>
+      <FilterProyek proyek={proyek} />
     </main>
   );
 }

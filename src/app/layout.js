@@ -14,26 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-title: {
-default: "Andi Pratama | Portofolio",
-template:"%s | Andi Pratama",
-},
-description: "Portofolio Andi Pratama, siswa SMK calon Junior Web Developer di Kelas Industri UBIG.",
+  title: {
+    default: "Laili Majida | Portofolio",
+    template: "%s | Laili Majida",
+  },
+  description:
+    "Portofolio Laili Majida, siswi SMK calon Junior Web Developer di Kelas Industri UBIG.",
 };
-
-// di dalam return, pada tag <html> lang="id"
 
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="en"
+    <html
+      lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-later text-gray-800">
-       <Navbar/>
+      <body className="min-h-screen flex flex-col bg-latar text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+        <Navbar />
         {children}
-       <Footer/>
-        </body>
-        </html>
+        <Footer />
+      </body>
+    </html>
   );
 }

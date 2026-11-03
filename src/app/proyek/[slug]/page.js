@@ -25,7 +25,7 @@ export default async function DetailProyek({ params }) {
   if (!item) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <h1 className="text-2xl font-bold text-utama">
+        <h1 className="text-2xl font-bold text-utama dark:text-sky-200">
           Proyek tidak ditemukan
         </h1>
 
@@ -48,7 +48,7 @@ export default async function DetailProyek({ params }) {
         &larr; Kembali ke daftar proyek
       </Link>
 
-      <h1 className="mt-4 text-3xl font-bold text-utama md:text-4xl">
+      <h1 className="mt-4 text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
         {item.judul}
       </h1>
 
@@ -67,7 +67,7 @@ export default async function DetailProyek({ params }) {
 
       <p className="mt-6 text-lg">{item.deskripsi}</p>
 
-      <h2 className="mt-8 text-2xl font-bold text-utama">
+      <h2 className="mt-8 text-2xl font-bold text-utama dark:text-sky-200">
         Yang Saya Pelajari
       </h2>
 

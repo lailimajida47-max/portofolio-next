@@ -44,17 +44,17 @@ const proyekTerbaru = proyek.slice(-3).reverse();
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
+    <main className="mx-auto min-h-screen max-w-5xl bg-latar px-4 py-10 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
       <Hero
         nama="Laili Majida"
         tagline="Siswa Kelas XI SMK Jurusan RPL, calon Junior Web Developer di Kelas Industri UBIG."
       />
 
-      <section className="mt-10 rounded-xl bg-white p-6 shadow-sm">
-        <h2 className="mb-3 text-2xl font-bold text-utama">
+      <section className="mt-10 rounded-xl bg-white p-6 shadow-sm dark:bg-gray-800">
+        <h2 className="mb-3 text-2xl font-bold text-utama dark:text-sky-200">
           Tentang Saya
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600">
+        <p className="text-sm leading-relaxed text-slate-600 dark:text-gray-300">
           Halo! Saya Laili Majida, siswi kelas XI RPL 1 di jurusan
           Rekayasa Perangkat Lunak (RPL). Saya tertarik dengan dunia
           teknologi dan pengembangan website. Saya juga senang memasak
@@ -64,9 +64,11 @@ export default function Home() {
       </section>
 
       <section className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div className="rounded-xl bg-white p-5 shadow-sm">
-          <h2 className="mb-3 text-xl font-bold text-utama">Hobi</h2>
-          <ul className="list-disc pl-5 text-sm leading-relaxed text-slate-600">
+        <div className="rounded-xl bg-white p-5 shadow-sm dark:bg-gray-800">
+          <h2 className="mb-3 text-xl font-bold text-utama dark:text-sky-200">
+            Hobi
+          </h2>
+          <ul className="list-disc pl-5 text-sm leading-relaxed text-slate-600 dark:text-gray-300">
             <li>Memasak</li>
             <li>Baking</li>
             <li>Menonton drakor</li>
@@ -75,14 +77,14 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="rounded-xl bg-white p-5 shadow-sm">
-          <h2 className="mb-3 text-xl font-bold text-utama">
+        <div className="rounded-xl bg-white p-5 shadow-sm dark:bg-gray-800">
+          <h2 className="mb-3 text-xl font-bold text-utama dark:text-sky-200">
             Cita-cita
           </h2>
-          <p className="text-sm leading-relaxed text-slate-600">
+          <p className="text-sm leading-relaxed text-slate-600 dark:text-gray-300">
             Menjadi pengusaha bakery.
           </p>
-          <ol className="mt-2 list-decimal pl-5 text-sm leading-relaxed text-slate-600">
+          <ol className="mt-2 list-decimal pl-5 text-sm leading-relaxed text-slate-600 dark:text-gray-300">
             <li>Menyelesaikan pendidikan di SMK.</li>
             <li>Melanjutkan pendidikan untuk usaha bisnis.</li>
             <li>Belajar berwirausaha dan membangun usaha sendiri.</li>
@@ -91,7 +93,7 @@ export default function Home() {
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-utama">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">
           Keahlian
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
@@ -106,7 +108,7 @@ export default function Home() {
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-utama">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">
           Proyek Terbaru
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
@@ -122,12 +124,12 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="mt-10 rounded-xl bg-white p-6 shadow-sm">
-        <h2 className="mb-4 text-2xl font-bold text-utama">
+      <section className="mt-10 rounded-xl bg-white p-6 shadow-sm dark:bg-gray-800">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">
           Jadwal Kegiatan
         </h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-left text-sm text-slate-600">
+          <table className="w-full border-collapse text-left text-sm text-slate-600 dark:text-gray-300">
             <thead>
               <tr className="bg-sky-950 text-white">
                 <th className="px-4 py-3">Hari</th>
@@ -139,7 +141,7 @@ export default function Home() {
               {jadwal.map((item, index) => (
                 <tr
                   key={`${item.hari}-${index}`}
-                  className="border-b border-gray-200"
+                  className="border-b border-gray-200 dark:border-gray-700"
                 >
                   <td className="px-4 py-3">{item.hari}</td>
                   <td className="px-4 py-3">{item.waktu}</td>
