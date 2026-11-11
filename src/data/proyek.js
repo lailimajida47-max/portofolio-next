@@ -51,4 +51,30 @@ export const proyek = [
       "Diuji di lebar 360, 768, dan 1280 px",
     ],
   },
+  {
+    slug: "kalkulator-nilai",
+    judul: "Kalkulator Nilai Rapor",
+    kategori: "JavaScript",
+    minggu: "Minggu 06",
+    gambar: "/proyek-kalkulator.png",
+    deskripsi: "Kalkulator untuk menghitung nilai rapor.",
+    fitur: [
+      "Input nilai mata pelajaran",
+      "Menghitung rata-rata nilai",
+      "Menampilkan hasil perhitungan",
+    ],
+  },
+  {
+    slug: "soal-logika",
+    judul: "Lima Soal Logika",
+    kategori: "JavaScript",
+    minggu: "Minggu 07",
+    gambar: "/proyek-logika.png",
+    deskripsi: "Latihan soal logika menggunakan JavaScript.",
+    fitur: [
+      "Lima soal latihan logika",
+      "Pilihan jawaban",
+      "Menampilkan hasil jawaban",
+    ],
+  },
 ];
