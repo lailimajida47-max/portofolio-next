@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lima Soal Logika</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f1faee;
+  padding: 30px;
+  color: #1d3557;
+}
+.card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 22px;
+  box-shadow: 0 4px 10px #0001;
+}
+.badge {
+  background: #e8f5e9;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+h1 { margin-top: 30px; }
+p { color: #555; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="badge">JavaScript</span>
+  <h1>Lima Soal Logika</h1>
+  <p>Lima fungsi logika menggunakan JavaScript
+  yang menampilkan hasil pada Console.</p>
+</div>
+
+<div class="card">
+  <span class="badge">Soal 1</span>
+  <h2>Ganjil atau Genap</h2>
+  <p>Menentukan apakah angka termasuk ganjil atau genap.</p>
+</div>
+
+<div class="card">
+  <span class="badge">Soal 2</span>
+  <h2>Konversi Suhu</h2>
+  <p>Mengubah suhu Celsius menjadi Fahrenheit.</p>
+</div>
+
+<div class="card">
+  <span class="badge">Soal 3</span>
+  <h2>Nilai Terbesar</h2>
+  <p>Mencari nilai terbesar dari beberapa angka.</p>
+</div>
+
+<div class="card">
+  <span class="badge">Soal 4</span>
+  <h2>Tahun Kabisat</h2>
+  <p>Menentukan apakah suatu tahun termasuk tahun kabisat.</p>
+</div>
+
+<div class="card">
+  <span class="badge">Soal 5</span>
+  <h2>Bilangan Positif atau Negatif</h2>
+  <p>Mengidentifikasi jenis bilangan berdasarkan nilainya.</p>
+</div>
+
+<script>
+function ganjilGenap(angka) {
+  return angka % 2 === 0 ? "Genap" : "Ganjil";
+}
+
+function celsiusKeFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+function nilaiTerbesar(angka) {
+  return Math.max(...angka);
+}
+
+function tahunKabisat(tahun) {
+  return tahun % 400 === 0 ||
+    (tahun % 4 === 0 && tahun % 100 !== 0);
+}
+
+function jenisBilangan(angka) {
+  if (angka > 0) return "Positif";
+  if (angka < 0) return "Negatif";
+  return "Nol";
+}
+
+console.log("Soal 1: Ganjil atau Genap");
+console.log(ganjilGenap(7));
+console.log(ganjilGenap(12));
+
+console.log("Soal 2: Konversi Suhu");
+console.log(celsiusKeFahrenheit(32));
+
+console.log("Soal 3: Nilai Terbesar");
+console.log(nilaiTerbesar([5, 9, 2]));
+
+console.log("Soal 4: Tahun Kabisat");
+console.log(tahunKabisat(2024));
+console.log(tahunKabisat(2025));
+
+console.log("Soal 5: Jenis Bilangan");
+console.log(jenisBilangan(10));
+console.log(jenisBilangan(-5));
+</script>
+
+</body>
+</html>
