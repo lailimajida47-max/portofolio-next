@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-utama text-white">
+    <header className="bg-[#1D3557] text-white">
       <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
         <Link href="/" className="text-xl font-bold">
           Laili Majida
@@ -23,12 +23,10 @@ export default function Navbar() {
 
         <ul className="flex flex-wrap gap-x-5 gap-y-2">
           {menu.map((item) => {
-            let kelas = "text-gray-200 hover:text-white";
-
-            if (pathname === item.href) {
-              kelas =
-                "font-bold text-white underline underline-offset-8";
-            }
+            const kelas =
+              pathname === item.href
+                ? "font-bold text-white underline underline-offset-8"
+                : "text-gray-200 hover:text-white";
 
             return (
               <li key={item.href}>

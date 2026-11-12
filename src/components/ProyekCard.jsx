@@ -1,34 +1,38 @@
+
 import Image from "next/image";
 import Link from "next/link";
+import { Card } from "@/components/ui/card";
 
 export default function ProyekCard({ proyek }) {
+  const gambar = proyek.gambar_url?.trim();
+
   return (
-    <Link
-      href={`/proyek/${proyek.slug}`}
-      className="block overflow-hidden rounded-xl border border-gray-200 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
-    >
-      <Image
-        src={proyek.gambar}
-        alt={`Tangkapan layar ${proyek.judul}`}
-        width={640}
-        height={420}
-        loading="eager"
-        className="h-auto w-full"
-      />
+    <Link href={`/proyek/${proyek.slug}`}>
+      <Card className="h-full overflow-hidden">
+        {gambar ? (
+          <Image
+            src={gambar}
+            alt={`Tangkapan layar ${proyek.judul}`}
+            width={640}
+            height={360}
+            className="h-48 w-full object-cover"
+          />
+        ) : (
+          <div className="flex h-48 items-center justify-center bg-muted text-muted-foreground">
+            Gambar belum tersedia
+          </div>
+        )}
 
-      <div className="p-5">
-        <span className="rounded-full bg-latar dark:bg-gray-900 px-3 py-1 text-xs font-semibold text-utama dark:text-sky-200">
-          {proyek.kategori}
-        </span>
+        <div className="p-5">
+          <h2 className="text-xl font-bold text-primary">
+            {proyek.judul}
+          </h2>
 
-        <h3 className="mt-3 text-lg font-semibold text-utama dark:text-sky-200">
-          {proyek.judul}
-        </h3>
-
-        <p className="mt-1 text-sm text-gray-600">
-          {proyek.deskripsi}
-        </p>
-      </div>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {proyek.deskripsi}
+          </p>
+        </div>
+      </Card>
     </Link>
   );
 }
