@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -152,8 +151,7 @@ export default function FormKontak() {
       </Button>
 
       <p className="text-xs leading-relaxed text-gray-500">
-        Form ini belum mengirim pesan. Pengiriman pesan
-        diaktifkan di Minggu 15.
+        Form ini belum mengirim pesan. Untuk menyapa saya, tulis pesan di halaman Buku Tamu.
       </p>
 
       {/* Kode 6.11: pesan berhasil */}
